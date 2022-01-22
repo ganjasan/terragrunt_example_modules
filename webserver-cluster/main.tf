@@ -1,18 +1,3 @@
-provider "aws" {
-  region = "eu-central-1"
-}
-
-#terraform backend
-terraform {
-  backend "s3" {
-    bucket         = "ganjasan-terragrunt-example-1"
-    key            = "prod/vpc/terraform.tfstate"
-    region         = "eu-central-1"
-    encrypt        = true
-    dynamodb_table = "ganjasan-terragrunt-example-backend-lock-1"
-  }
-}
-
 # ---------------------------------------------------------------------------------------------------------------------
 # CREATE THE ASG
 # ---------------------------------------------------------------------------------------------------------------------
